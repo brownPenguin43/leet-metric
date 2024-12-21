@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* landing page css with keyframes for fading animations */
+#landing-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1e1e2f; /* Same as main background for blending purpose  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 2s ease-in-out forwards; /* Fade-out holey*/
+    animation-delay: 2s;
+}
+/* maybe itll woerk--->logo animation */
+.landing-logo {
+    max-width: 300px;
+    animation: zoomIn 1.5s ease-in-out; 
+    border-radius: 50%;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* landing page css ends here */
+.navbar {
+    width: 100%;
+    background-color: #29293d;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* z-index: 1000; */
+}
+
+.navbar h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    /* display: flex; */
+    /* gap: 20px; */
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+}
+
+.nav-links li a:hover {
+    color: #50fa7b;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #2b2b40;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-input {
+    width: 75%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+#search-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #50fa7b;
+    color: #1e1e2f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #3bdb67;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #299f5d;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background: conic-gradient(#299f5d var(--progress-degree, 0%), #283a2e 0%);
+    flex-direction: column;
+    transition: background 0.6s ease-in-out;
+}
+
+.circle span {
+    position: relative;
+    z-index: 2;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats-cards {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+.card {
+    background-color: rgb(230, 146, 44);
+    width: 45%;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    min-height: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+.card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: #29293d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.footer p a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s ease;
+}
+
+.footer p a:hover{
+    color:#3bdb67 ;
+}

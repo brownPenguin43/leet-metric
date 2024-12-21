@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetMetric</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- landing page (will eventually fade out) -->
+    <div id="landing-page">
+        <img src="DALL·E 2024-12-20 17.25.06 - A modern and sleek logo for the LeetMetric app, designed with a tech-savvy and competitive programming theme. The logo should feature a blend of codin.webp" alt="oopsie daisy" class="landing-logo">
+    </div> 
+    <!-- landing page ends here -->
+    <nav class="navbar">
+        <h1>LeetMetric</h1>
+        <ul class="nav-links">
+            <li><a href="https://www.blogger.com/blog/post/edit/preview/4128634404527917017/4987301830338878834" id="about-link">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>LeetMetric</h1>
+
+        <div class="user-container">
+            <p>Enter your username below:</p>
+            <div class="user-input-container">
+                <input type="text" placeholder="Enter your username here" id="user-input">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="progress">
+                <div class="progress-item">
+                    <div class="easy-progress circle">
+                        <span id="easy-label"></span>
+                        <p style="color:#1CBABA;">Easy</p>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="medium-progress circle">
+                        <span id="medium-label"></span>
+                        <p style="color:#FFB700;">Medium</p>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="hard-progress circle">
+                        <span id="hard-label"></span>
+                        <p style="color:#F63737;">Hard</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-cards">
+                <!-- Cards will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <p>Contact us at: <a href="https://www.linkedin.com/in/prakhar-shukla-118159292/">dontContactUs@leetmetric.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
